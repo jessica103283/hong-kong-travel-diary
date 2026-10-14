@@ -60,8 +60,53 @@
 @media(max-width:900px){.food-grid{grid-template-columns:repeat(3,minmax(0,1fr))}}
 @media(max-width:620px){.food-section{padding-top:18px;margin-bottom:35px}.food-winners,.food-singles{grid-template-columns:1fr;gap:8px}.food-winner,.food-single{padding:12px}.food-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}.food-card{min-height:120px;padding:9px}.food-card h3{font-size:9px}.food-method{font-size:9px}.food-filters{gap:5px}.food-filter{padding:7px 9px}}
 @media(max-width:390px){.food-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+
+.route-section{margin:22px 0 34px;padding:24px;border:1px solid var(--line);border-radius:20px;background:#f2f6ed}
+.route-intro{max-width:720px;color:var(--muted);font-size:12px;line-height:1.8;margin:8px 0 16px}
+.route-map-card{background:#fffefa;border:1px solid var(--line);border-radius:15px;padding:10px;overflow:hidden}
+.route-map-scroll{overflow-x:auto;scrollbar-color:#bfd0c1 #f7f4eb}
+.route-map{display:block;width:100%;min-width:680px;height:auto}
+.route-map text{font-family:'Noto Sans TC',sans-serif}
+.route-legend{display:flex;gap:14px;flex-wrap:wrap;padding:8px 9px 2px;color:#718078;font-size:10px}
+.route-legend span{display:inline-flex;align-items:center;gap:6px}
+.route-legend i{display:inline-block;width:18px;border-top:3px solid #df8e73}
+.route-legend .local-line{border-top-color:#628770;border-top-style:dashed}
+.route-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin-top:12px}
+.route-day{background:#fffefa;border:1px solid var(--line);border-radius:13px;padding:14px}
+.route-day-head{display:flex;justify-content:space-between;align-items:center;gap:8px}
+.route-day-tag{font-size:9px;letter-spacing:.08em;font-weight:800;color:#ad7559;background:#fff0e5;border-radius:20px;padding:5px 8px}
+.route-day h3{font:700 13px/1.5 'Noto Sans TC',sans-serif;margin:9px 0 5px}
+.route-day p{font-size:11px;line-height:1.8;color:#65746b;margin:0}
+.route-day .route-eat{margin-top:6px;color:#9b6951}
+.route-map-link{display:inline-block;margin-top:9px;color:var(--green);font-size:10px;font-weight:700;text-decoration:none}
+.route-map-link:hover{text-decoration:underline}
+.route-note{font-size:10px;line-height:1.8;color:#848c82;margin:12px 2px 0}
+.route-sources{display:flex;gap:12px;flex-wrap:wrap;margin-top:8px}
+.route-sources a{color:#718b78;font-size:10px}
+.macau-food-block{margin-top:28px;padding-top:20px;border-top:1px dashed #ded5c7}
+.macau-food-top{display:flex;align-items:flex-start;justify-content:space-between;gap:12px}
+.macau-food-title{font:800 16px 'Noto Sans TC',sans-serif;margin:0}
+.macau-food-sub{font-size:10px;color:#8c9188;line-height:1.7;margin:5px 0 0}
+.macau-winners{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:9px;margin:13px 0}
+.macau-pick{background:#fff8ed;border:1px solid #efdfca;border-radius:12px;padding:12px}
+.macau-pick b{display:block;font:700 11px/1.5 'Noto Sans TC',sans-serif;margin:5px 0}
+.macau-pick span{font-size:9px;color:#8b7561}
+.macau-food-filters{display:flex;flex-wrap:wrap;gap:7px;margin:14px 0 11px}
+.macau-food-filter{border:1px solid #e6e2d6;background:#fffdf8;color:#718078;border-radius:18px;padding:7px 11px;font:600 9px 'Noto Sans TC',sans-serif;cursor:pointer}
+.macau-food-filter[aria-pressed="true"]{background:var(--green);border-color:var(--green);color:white}
+.macau-food-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:9px}
+.macau-food-grid .food-card{min-height:136px}
+.macau-food-grid .food-map{margin-top:6px}
+@media(max-width:900px){.macau-food-grid{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media(max-width:620px){
+.route-section{padding:16px 12px;margin:18px 0 28px}.route-grid{grid-template-columns:1fr;gap:8px}.route-day{padding:12px}
+.route-day h3{font-size:12px}.route-intro{font-size:11px}.macau-food-block{margin-top:22px;padding-top:16px}
+.macau-winners{grid-template-columns:1fr;gap:7px}.macau-pick{padding:10px}
+.macau-food-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}.macau-food-grid .food-card{min-height:128px;padding:9px}
+.macau-food-filter{padding:7px 9px}
+}
 </style></head><body>
-<header class="wrap"><a class="brand" href="#top"><span class="logo">🧳</span><span>香港散步日記<small>MY LITTLE HONG KONG TRIP</small></span></a><nav class="nav"><a href="#top">手帳首頁</a><a href="#days">行程日記</a><a href="#saved">地圖收藏</a><a href="#food">美食榜單</a><a href="#packing">打包清單</a><span class="avatar">🐰</span></nav></header>
+<header class="wrap"><a class="brand" href="#top"><span class="logo">🧳</span><span>香港散步日記<small>MY LITTLE HONG KONG TRIP</small></span></a><nav class="nav"><a href="#top">手帳首頁</a><a href="#days">行程日記</a><a href="#route">港澳路線</a><a href="#saved">地圖收藏</a><a href="#food">美食榜單</a><a href="#packing">打包清單</a><span class="avatar">🐰</span></nav></header>
 <main class="wrap" id="top"><section class="hero"><div><div class="eyebrow">✦　A LITTLE GETAWAY　✦</div><h1>把日子過成<br><em>明信片</em>的樣子。</h1><p>叮叮車慢慢晃，海風輕輕吹。<br>這次，和香港一起收集可愛的小日常吧。</p><a class="btn" href="#days">翻開旅行手帳　↗</a><a class="soft" href="#packing">出發準備 →</a></div><div class="scene" aria-hidden="true"><div class="sun"></div><div class="cloud c1">☁</div><div class="cloud c2">☁</div><div class="hill"></div><div class="hill2"></div><div class="water"></div><div class="tower t1"></div><div class="tower t2"></div><div class="tower t3"></div><div class="tower t4"></div><div class="tower t5"></div><div class="boat"></div><div class="post">HONG KONG<br>♡ POSTCARD</div></div></section>
 <section class="content"><div id="days"><div class="heading"><div><h2>旅程小片段 <span style="color:#e68b72">✿</span></h2><p>每一天，都值得好好收藏</p></div><a href="#days">完整行程　→</a></div><div class="cards">
 <article class="card"><div class="art"><svg viewBox="0 0 320 170" preserveAspectRatio="xMidYMid slice"><rect width="320" height="170" fill="#f7d7b9"/><circle cx="253" cy="39" r="23" fill="#f8cb76"/><path d="M0 119Q80 99 161 115T320 106V170H0Z" fill="#b7d0be"/><path d="M0 142Q100 126 320 137V170H0Z" fill="#93bcae"/><rect x="48" y="48" width="38" height="77" rx="3" fill="#e79578"/><rect x="93" y="30" width="48" height="96" rx="3" fill="#f0b777"/><rect x="151" y="53" width="33" height="72" rx="3" fill="#db8b72"/><path d="M55 58h23M55 73h23M55 88h23M100 42h34M100 59h34M100 76h34M100 93h34M157 63h20M157 78h20" stroke="#fff5d9" stroke-width="4"/><path d="M195 130q38-9 75 0l-8 12h-56Z" fill="#fff8e9"/></svg><span class="badge">DAY 01 · 港島</span><button class="heart" aria-label="收藏">♡</button></div><div class="info"><h3>叮叮車與海旁散步</h3><div class="meta"><span>📍 中環・上環</span><span class="tag">城市漫遊</span></div></div></article>
@@ -70,6 +115,81 @@
 <aside class="side"><section class="sidecard"><div class="sidehead"><h3>今日香港天氣</h3><a href="https://www.hko.gov.hk/tc/" target="_blank" rel="noreferrer">天文台 →</a></div><div class="weather"><i>🌤️</i><div><strong>24°</strong><small>多雲，偶有陽光</small></div></div><p class="hint">帶件薄外套，海旁散步剛剛好 ☁</p></section>
 <section class="sidecard" id="packing"><div class="sidehead"><h3>出發小清單</h3><a>已完成 <span id="count">3</span>/5</a></div><div class="checks"><label class="check"><input type="checkbox" checked><span>八達通 / 交通卡</span></label><label class="check"><input type="checkbox" checked><span>相機和充電器</span></label><label class="check"><input type="checkbox" checked><span>最喜歡的旅行小包</span></label><label class="check"><input type="checkbox"><span>雨傘和薄外套</span></label><label class="check"><input type="checkbox"><span>留白的手帳頁</span></label></div><div class="progresslabel"><span>準備進度</span><span id="percent">60%</span></div><div class="progress"><span id="bar"></span></div></section>
 <section class="sidecard note"><div class="sidehead"><h3>給自己的旅行便條</h3></div><p>不用趕著去很多地方。<br>好好看一場日落、喝一杯凍檸茶，<br>就是很棒的一天了。</p><div class="sign">— 慢慢走，也很好 ♡</div></section></aside></section>
+
+
+<section class="route-section" id="route" aria-labelledby="route-title">
+  <div class="heading saved-head">
+    <div><h2 id="route-title">香港 × 澳門順路行程 <span style="color:#e68b72">✿</span></h2>
+      <p>跨境先走澳門，回香港後按區域串遊，少一點來回折返。</p></div>
+    <span class="spots-count">TRIP ROUTE</span>
+  </div>
+  <p class="route-intro">依「香港澳門」文件中的景點與交通筆記整理成示意路線。先在機場附近休息，隔天經港珠澳大橋到澳門；回港後以尖沙咀為起點，分區走大嶼山、九龍和港島。</p>
+  <div class="route-map-card">
+    <div class="route-map-scroll">
+      <svg class="route-map" viewBox="0 0 900 340" role="img" aria-labelledby="routeMapTitle routeMapDesc">
+        <title id="routeMapTitle">香港澳門旅行路線示意圖</title>
+        <desc id="routeMapDesc">香港機場搭接駁巴士到香港口岸，乘港澳穿梭巴士到澳門口岸，再遊氹仔與路氹；回香港後由尖沙咀串遊大嶼山、九龍與港島。</desc>
+        <defs><marker id="routeArrow" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto"><path d="M0 0L8 4L0 8Z" fill="#df8e73"/></marker><marker id="localArrow" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto"><path d="M0 0L8 4L0 8Z" fill="#628770"/></marker></defs>
+        <rect width="900" height="340" rx="12" fill="#eaf3f0"/>
+        <path d="M0 28Q125 5 244 45T464 39V137Q335 151 216 126T0 145Z" fill="#dbe8d7"/>
+        <path d="M0 238Q95 204 181 230T340 218V340H0Z" fill="#dbe8d7"/>
+        <path d="M610 0H900V340H613Q645 282 618 225T626 110Z" fill="#dbe8d7"/>
+        <path d="M768 74C724 95 685 126 613 158" fill="none" stroke="#df8e73" stroke-width="3" stroke-linecap="round" stroke-dasharray="7 6" marker-end="url(#routeArrow)"/>
+        <path d="M613 158C448 149 300 134 180 168" fill="none" stroke="#d4a77f" stroke-width="8" opacity=".28"/>
+        <path d="M613 158C448 149 300 134 180 168" fill="none" stroke="#df8e73" stroke-width="4" stroke-linecap="round" stroke-dasharray="9 7" marker-end="url(#routeArrow)"/>
+        <path d="M180 168C300 134 448 149 613 158" fill="none" stroke="#df8e73" stroke-width="2" stroke-linecap="round" stroke-dasharray="3 7" marker-end="url(#routeArrow)"/>
+        <path d="M180 168C168 116 187 91 248 83" fill="none" stroke="#628770" stroke-width="3" stroke-linecap="round" stroke-dasharray="5 6" marker-end="url(#localArrow)"/>
+        <path d="M248 83C258 161 264 214 225 270" fill="none" stroke="#628770" stroke-width="3" stroke-linecap="round" stroke-dasharray="5 6" marker-end="url(#localArrow)"/>
+        <path d="M225 270C208 239 189 204 180 168" fill="none" stroke="#628770" stroke-width="2" stroke-linecap="round" stroke-dasharray="4 6" marker-end="url(#localArrow)"/>
+        <path d="M613 158C682 177 739 201 793 224" fill="none" stroke="#df8e73" stroke-width="4" stroke-linecap="round" stroke-dasharray="9 7" marker-end="url(#routeArrow)"/>
+        <path d="M793 224C762 174 767 122 809 86" fill="none" stroke="#628770" stroke-width="3" stroke-linecap="round" stroke-dasharray="5 6" marker-end="url(#localArrow)"/>
+        <path d="M793 224C830 248 838 278 830 302" fill="none" stroke="#628770" stroke-width="3" stroke-linecap="round" stroke-dasharray="5 6" marker-end="url(#localArrow)"/>
+        <path d="M793 224C690 196 610 162 500 90" fill="none" stroke="#628770" stroke-width="2" stroke-linecap="round" stroke-dasharray="4 7" marker-end="url(#localArrow)"/>
+        <text x="72" y="58" font-size="15" font-weight="700" fill="#527461">澳門・氹仔</text><text x="728" y="33" font-size="15" font-weight="700" fill="#527461">香港</text>
+        <text x="374" y="126" font-size="11" fill="#8d7861">港珠澳大橋・金巴</text><text x="370" y="293" font-size="10" fill="#74857a">跨境路線依口岸交通指示</text>
+        <g><circle cx="768" cy="74" r="15" fill="#e9856d"/><text x="768" y="79" text-anchor="middle" font-size="12" font-weight="700" fill="white">1</text><text x="783" y="68" font-size="10" fill="#385248">香港機場</text></g>
+        <g><circle cx="613" cy="158" r="15" fill="#e9856d"/><text x="613" y="163" text-anchor="middle" font-size="12" font-weight="700" fill="white">2</text><text x="625" y="148" font-size="10" fill="#385248">香港口岸</text></g>
+        <g><circle cx="180" cy="168" r="15" fill="#e9856d"/><text x="180" y="173" text-anchor="middle" font-size="12" font-weight="700" fill="white">3</text><text x="86" y="190" font-size="10" fill="#385248">澳門口岸</text></g>
+        <g><circle cx="248" cy="83" r="15" fill="#718c70"/><text x="248" y="88" text-anchor="middle" font-size="12" font-weight="700" fill="white">4</text><text x="264" y="80" font-size="10" fill="#385248">官也街・氹仔村</text></g>
+        <g><circle cx="225" cy="270" r="15" fill="#718c70"/><text x="225" y="275" text-anchor="middle" font-size="12" font-weight="700" fill="white">5</text><text x="241" y="275" font-size="10" fill="#385248">路氹・倫敦人／水舞間</text></g>
+        <g><circle cx="793" cy="224" r="15" fill="#e9856d"/><text x="793" y="229" text-anchor="middle" font-size="12" font-weight="700" fill="white">6</text><text x="805" y="219" font-size="10" fill="#385248">尖沙咀・M+</text></g>
+        <g><circle cx="809" cy="86" r="13" fill="#718c70"/><text x="809" y="91" text-anchor="middle" font-size="11" font-weight="700" fill="white">7</text><text x="824" y="84" font-size="10" fill="#385248">港島・山頂</text></g>
+        <g><circle cx="830" cy="302" r="13" fill="#718c70"/><text x="830" y="307" text-anchor="middle" font-size="11" font-weight="700" fill="white">8</text><text x="844" y="300" font-size="10" fill="#385248">黃大仙・廟街</text></g>
+        <g><circle cx="500" cy="90" r="12" fill="#718c70"/><text x="500" y="95" text-anchor="middle" font-size="10" font-weight="700" fill="white">9</text><text x="514" y="88" font-size="10" fill="#385248">昂坪 360</text></g>
+      </svg>
+    </div>
+    <div class="route-legend"><span><i></i> 跨境與回港主路線</span><span><i class="local-line"></i> 同區景點串遊</span></div>
+  </div>
+  <div class="route-grid">
+    <article class="route-day"><div class="route-day-head"><span class="route-day-tag">抵港日</span><span>🛬</span></div>
+      <h3>晚到先休息，隔天再過關</h3><p>抵達香港機場後在機場附近休息，早上從機場搭 B4 到香港口岸，再轉港澳線金巴到澳門口岸。這段依口岸指示換乘最清楚。</p>
+      <a class="route-map-link" target="_blank" rel="noopener noreferrer" href="https://www.google.com/maps/dir/?api=1&origin=Hong+Kong+International+Airport&destination=Hong+Kong-Zhuhai-Macao+Bridge+Macao+Port&travelmode=transit">打開跨境路線 ↗</a></article>
+    <article class="route-day"><div class="route-day-head"><span class="route-day-tag">澳門・氹仔</span><span>🥮</span></div>
+      <h3>先官也街，再到路氹看表演</h3><p>到澳門後把官也街、氹仔村排在前半天；接著搭酒店接駁或的士往路氹，逛倫敦人、吃安德魯餅店，晚間再安排水舞間。請先確認當日場次。</p>
+      <p class="route-eat">吃：澤賢記（官也街）→ 安德魯餅店（倫敦人）→ 太二酸菜魚（倫敦人）。</p>
+      <a class="route-map-link" target="_blank" rel="noopener noreferrer" href="https://www.google.com/maps/dir/?api=1&origin=Taipa+Village+Macau&waypoints=Rua+do+Cunha+Macau%7CLondoner+Macao&destination=City+of+Dreams+Macau&travelmode=transit">打開氹仔・路氹路線 ↗</a></article>
+    <article class="route-day"><div class="route-day-head"><span class="route-day-tag">澳門 → 九龍</span><span>⛴️</span></div>
+      <h3>早餐後回香港，下午留給西九龍</h3><p>若時間合適，早餐挑喜蓮咖啡或馬慶康南天咖啡室；從澳門口岸搭金巴回港，出香港口岸後轉 A21 或 A25 往尖沙咀，再安排 M+、海旁散步與維港遊船。</p>
+      <a class="route-map-link" target="_blank" rel="noopener noreferrer" href="https://www.google.com/maps/dir/?api=1&origin=Hong+Kong-Zhuhai-Macao+Bridge+Macao+Port&waypoints=Hong+Kong-Zhuhai-Macao+Bridge+Hong+Kong+Port&destination=M%2B+Museum+Hong+Kong&travelmode=transit">打開回港・西九龍路線 ↗</a></article>
+    <article class="route-day"><div class="route-day-head"><span class="route-day-tag">大嶼山</span><span>🚠</span></div>
+      <h3>昂坪 360 集中走一天</h3><p>從市區往東涌搭纜車、逛昂坪；回九龍後到廟街夜市，想吃甜品可把佐敦的佳佳甜品放在晚餐後，順路不折返。</p>
+      <p class="route-eat">吃：按體力決定在昂坪用餐或回佐敦再吃甜品。</p>
+      <a class="route-map-link" target="_blank" rel="noopener noreferrer" href="https://www.google.com/maps/dir/?api=1&origin=Tsim+Sha+Tsui+Hong+Kong&destination=Ngong+Ping+360&travelmode=transit">打開東涌・昂坪路線 ↗</a></article>
+    <article class="route-day"><div class="route-day-head"><span class="route-day-tag">九龍 → 港島</span><span>🚋</span></div>
+      <h3>黃大仙早走，傍晚集中在中環與山頂</h3><p>早上先去黃大仙祠；之後搭港鐵到中環，走半山扶手電梯、搭叮叮車體驗港島，再搭山頂纜車上太平山。日落後選維港遊船或蘭桂坊晚餐，留點空檔比較舒服。</p>
+      <p class="route-eat">吃：中環蘭芳園；若想看海上夜景，先確認遊船班次再排晚餐。</p>
+      <a class="route-map-link" target="_blank" rel="noopener noreferrer" href="https://www.google.com/maps/dir/?api=1&origin=Wong+Tai+Sin+Temple+Hong+Kong&waypoints=Central+Mid-Levels+Escalator%7CCentral+Hong+Kong&destination=Peak+Tram+Lower+Terminus&travelmode=transit">打開港島路線 ↗</a></article>
+    <article class="route-day"><div class="route-day-head"><span class="route-day-tag">回程日</span><span>🧳</span></div>
+      <h3>尖沙咀出發直達機場</h3><p>由九龍市區搭 A21 往機場；行李與通關時間留足緩衝，當日班次和站點以官方交通頁面為準。</p>
+      <a class="route-map-link" target="_blank" rel="noopener noreferrer" href="https://www.google.com/maps/dir/?api=1&origin=Tsim+Sha+Tsui+Hong+Kong&destination=Hong+Kong+International+Airport&travelmode=transit">查看尖沙咀到機場 ↗</a></article>
+  </div>
+  <p class="route-note">交通提醒：香港口岸可接駁 B4 前往機場；香港口岸亦有 A 線巴士往九龍市區。港澳金巴官方票價依時段計，日間／夜間票價與班次出發前請再確認；示意路線不含口岸排隊時間。</p>
+  <div class="route-sources" aria-label="官方交通與表演資訊">
+    <a target="_blank" rel="noopener noreferrer" href="https://www.td.gov.hk/en/transport_in_hong_kong/land_based_cross_boundary_transport/access_to_hzmb_hong_kong_port/">香港運輸署｜往香港口岸交通 ↗</a>
+    <a target="_blank" rel="noopener noreferrer" href="https://www.hzmbus.com/en/">港珠澳大橋穿梭巴士 ↗</a>
+    <a target="_blank" rel="noopener noreferrer" href="https://cityofdreamsmacau.com/en/house-of-dancing-water">水舞間場次與購票 ↗</a>
+  </div>
+</section>
 
 <section class="saved-section" id="saved" aria-labelledby="saved-title">
   <div class="heading saved-head">
@@ -112,6 +232,28 @@
   </div>
   <div class="food-grid" id="foodGrid"></div>
   <p class="food-note">整理自 Google Maps「想去的地方」與「景點」等收藏；將「榕哥陳皮燒鵝」併入美食，排除位於台灣的「56巷口湯包」與「沙嗲士多」。中菜館「明廚有膳餐廳」只有 8 則評論，評論量太少，暫不排名。</p>
+
+<div class="macau-food-block" id="macau-food" aria-labelledby="macau-food-title">
+  <div class="macau-food-top"><div><h3 class="macau-food-title" id="macau-food-title">澳門美食收藏 <span style="color:#e68b72">✿</span></h3>
+    <p class="macau-food-sub">從 Google Maps「想去的地方」整理；按收藏時的類別、評分與評論量分類。每張卡可開啟地圖。</p></div>
+    <span class="spots-count">10 MACAU FOOD SPOTS</span></div>
+  <div class="macau-winners">
+    <article class="macau-pick"><span>港式茶餐廳・同分比較</span><b>喜蓮咖啡</b><span>★ 4.2 · 683 則；與馬慶康同分，評論量較多</span></article>
+    <article class="macau-pick"><span>收藏中最高評分</span><b>酥富匙 千層牛肉酥</b><span>★ 4.8 · 335 則評論</span></article>
+    <article class="macau-pick"><span>路氹甜點</span><b>安德魯餅店・倫敦人店</b><span>★ 4.5 · 333 則評論</span></article>
+  </div>
+  <div class="macau-food-filters" role="group" aria-label="篩選澳門美食類別">
+    <button class="macau-food-filter" type="button" data-macau-filter="all" aria-pressed="true">全部 10</button>
+    <button class="macau-food-filter" type="button" data-macau-filter="茶餐廳咖啡">茶餐廳・咖啡</button>
+    <button class="macau-food-filter" type="button" data-macau-filter="烘焙甜點">烘焙・甜點</button>
+    <button class="macau-food-filter" type="button" data-macau-filter="澳門小食">澳門小食</button>
+    <button class="macau-food-filter" type="button" data-macau-filter="燒味">燒味</button>
+    <button class="macau-food-filter" type="button" data-macau-filter="餐廳">餐廳</button>
+  </div>
+  <div class="macau-food-grid" id="macauFoodGrid"></div>
+  <p class="food-note">收藏快照：2026-10-14。評分與評論數會變動；「最高評分」只代表此收藏清單的當次快照。單店類別不作跨料理勝負判定。</p>
+</div>
+
 </section>
 <footer><span>© 2026 香港散步日記　用一點點可愛記住旅程。</span><span>MADE WITH ♡ AND A LITTLE BIT OF HONG KONG</span></footer></main><div class="toast" role="status" aria-live="polite">已收藏這個旅行片段 ♡</div>
 <script>
@@ -206,4 +348,22 @@ const foodGrid=document.querySelector("#foodGrid");
 function renderFoodPlaces(filter){foodGrid.replaceChildren();const chosen=foodPlaces.filter(p=>filter==="all"||p.group===filter||(filter==="其他"&&["甜品","咖喱","牛腩","輕食","其他","小食"].includes(p.group)));chosen.forEach(p=>{const card=document.createElement("article");card.className="food-card";const top=document.createElement("div");top.className="food-card-top";const icon=document.createElement("span");icon.className="food-card-icon";icon.textContent=p.icon;const category=document.createElement("span");category.className="food-card-category";category.textContent=p.type;top.append(icon,category);const title=document.createElement("h3");title.textContent=p.name;const score=document.createElement("div");score.className="food-card-rating";score.textContent="★ "+p.rating+" · "+p.reviews+" 則評論";card.append(top,title,score);if(p.note){const note=document.createElement("div");note.className="food-card-note";note.textContent=p.note;card.append(note)}if(p.winner&&!p.note){const note=document.createElement("div");note.className="food-card-note";note.textContent="同類收藏勝出";card.append(note)}card.append(makeFoodMapLink(p));foodGrid.append(card)})}
 document.querySelectorAll(".food-filter").forEach(button=>button.addEventListener("click",()=>{document.querySelectorAll(".food-filter").forEach(item=>item.setAttribute("aria-pressed",String(item===button)));renderFoodPlaces(button.dataset.foodFilter)}));
 renderFoodPlaces("all");
+
+const macauFoodPlaces=[
+  {name:"旺記咖啡",type:"咖啡店",group:"茶餐廳咖啡",rating:"3.8",reviews:"367",price:"MOP 50–100",icon:"☕",query:"旺記咖啡 澳門"},
+  {name:"喜蓮咖啡",type:"港式茶餐廳",group:"茶餐廳咖啡",rating:"4.2",reviews:"683",price:"MOP 1–100",icon:"🫖",query:"喜蓮咖啡 澳門"},
+  {name:"馬慶康南天咖啡室",type:"港式茶餐廳",group:"茶餐廳咖啡",rating:"4.2",reviews:"331",price:"MOP 50–100",icon:"🥪",query:"馬慶康南天咖啡室 澳門"},
+  {name:"Goat Bakers",type:"餅店・烘焙",group:"烘焙甜點",rating:"4.4",reviews:"210",price:"MOP 1–100",icon:"🥐",query:"Goat Bakers Macau"},
+  {name:"Bamu Bakery",type:"餅店・烘焙",group:"烘焙甜點",rating:"4.4",reviews:"42",price:"MOP 1–50",icon:"🍞",query:"Bamu Bakery Macau"},
+  {name:"安德魯餅店及咖啡店（倫敦人店）",type:"葡式蛋撻・咖啡",group:"烘焙甜點",rating:"4.5",reviews:"333",price:"MOP 1–100",icon:"🥧",query:"安德魯餅店及咖啡店 倫敦人 澳門"},
+  {name:"酥富匙 千層牛肉酥",type:"鹹點・酥皮",group:"澳門小食",rating:"4.8",reviews:"335",price:"MOP 1–100",icon:"🥐",query:"酥富匙 千層牛肉酥 澳門"},
+  {name:"澤賢記（官也街店）",type:"澳門小食・手信",group:"澳門小食",rating:"4.4",reviews:"247",price:"MOP 1–100",icon:"🍪",query:"澤賢記 官也街店 澳門"},
+  {name:"陳光記燒臘店",type:"燒味・燒臘",group:"燒味",rating:"3.9",reviews:"1,355",price:"MOP 100–200",icon:"🍖",query:"陳光記燒臘店 澳門"},
+  {name:"太二老壇子酸菜魚（澳門倫敦人店）",type:"酸菜魚・中式餐廳",group:"餐廳",rating:"4.5",reviews:"123",price:"MOP 200–250",icon:"🐟",query:"太二老壇子酸菜魚 澳門倫敦人"}
+];
+function makeMacauMapLink(place){const a=document.createElement("a");a.className="food-map";a.target="_blank";a.rel="noopener noreferrer";a.textContent="Google Maps 地點 ↗";a.href="https://www.google.com/maps/search/?api=1&query="+encodeURIComponent(place.query);return a}
+function renderMacauFood(filter){const grid=document.querySelector("#macauFoodGrid");grid.replaceChildren();const chosen=macauFoodPlaces.filter(p=>filter==="all"||p.group===filter);chosen.forEach(p=>{const card=document.createElement("article");card.className="food-card";const top=document.createElement("div");top.className="food-card-top";const icon=document.createElement("span");icon.className="food-card-icon";icon.textContent=p.icon;const category=document.createElement("span");category.className="food-card-category";category.textContent=p.type;top.append(icon,category);const title=document.createElement("h3");title.textContent=p.name;const score=document.createElement("div");score.className="food-card-rating";score.textContent="★ "+p.rating+" · "+p.reviews+" 則評論";const price=document.createElement("div");price.className="food-card-note";price.textContent=p.price;card.append(top,title,score,price,makeMacauMapLink(p));grid.append(card)})}
+document.querySelectorAll(".macau-food-filter").forEach(button=>button.addEventListener("click",()=>{document.querySelectorAll(".macau-food-filter").forEach(item=>item.setAttribute("aria-pressed",String(item===button)));renderMacauFood(button.dataset.macauFilter)}));
+renderMacauFood("all");
+
 </script></body></html>
