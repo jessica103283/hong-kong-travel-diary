@@ -87,7 +87,7 @@
 .macau-food-top{display:flex;align-items:flex-start;justify-content:space-between;gap:12px}
 .macau-food-title{font:800 16px 'Noto Sans TC',sans-serif;margin:0}
 .macau-food-sub{font-size:10px;color:#8c9188;line-height:1.7;margin:5px 0 0}
-.macau-winners{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:9px;margin:13px 0}
+.macau-winners{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:9px;margin:13px 0}
 .macau-pick{background:#fff8ed;border:1px solid #efdfca;border-radius:12px;padding:12px}
 .macau-pick b{display:block;font:700 11px/1.5 'Noto Sans TC',sans-serif;margin:5px 0}
 .macau-pick span{font-size:9px;color:#8b7561}
@@ -95,14 +95,14 @@
 .macau-food-filter{border:1px solid #e6e2d6;background:#fffdf8;color:#718078;border-radius:18px;padding:7px 11px;font:600 9px 'Noto Sans TC',sans-serif;cursor:pointer}
 .macau-food-filter[aria-pressed="true"]{background:var(--green);border-color:var(--green);color:white}
 .macau-food-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:9px}
-.macau-food-grid .food-card{min-height:136px}
-.macau-food-grid .food-map{margin-top:6px}
-@media(max-width:900px){.macau-food-grid{grid-template-columns:repeat(3,minmax(0,1fr))}}
+.macau-food-grid .food-card{min-height:188px}
+.macau-food-grid .food-map{margin-top:6px}.macau-food-grid .food-card-summary{font-size:9px;line-height:1.6;color:#6e7b72;margin-top:5px}
+@media(max-width:900px){.macau-winners{grid-template-columns:repeat(2,minmax(0,1fr))}.macau-food-grid{grid-template-columns:repeat(3,minmax(0,1fr))}}
 @media(max-width:620px){
 .route-section{padding:16px 12px;margin:18px 0 28px}.route-grid{grid-template-columns:1fr;gap:8px}.route-day{padding:12px}
 .route-day h3{font-size:12px}.route-intro{font-size:11px}.macau-food-block{margin-top:22px;padding-top:16px}
 .macau-winners{grid-template-columns:1fr;gap:7px}.macau-pick{padding:10px}
-.macau-food-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}.macau-food-grid .food-card{min-height:128px;padding:9px}
+.macau-food-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}.macau-food-grid .food-card{min-height:205px;padding:9px}
 .macau-food-filter{padding:7px 9px}
 }
 
@@ -239,12 +239,13 @@
 
 <div class="macau-food-block" id="macau-food" aria-labelledby="macau-food-title">
   <div class="macau-food-top"><div><h3 class="macau-food-title" id="macau-food-title">澳門美食收藏 <span style="color:#e68b72">✿</span></h3>
-    <p class="macau-food-sub">從 Google Maps「想去的地方」整理；按收藏時的類別、評分與評論量分類。每張卡可開啟地圖。</p></div>
+    <p class="macau-food-sub">從 Google Maps「想去的地方」整理；附評分、評論量、評論常提主題與摘要，每張卡可開啟地圖。</p></div>
     <span class="spots-count">10 MACAU FOOD SPOTS</span></div>
   <div class="macau-winners">
-    <article class="macau-pick"><span>港式茶餐廳・同分比較</span><b>喜蓮咖啡</b><span>★ 4.2 · 683 則；與馬慶康同分，評論量較多</span></article>
-    <article class="macau-pick"><span>收藏中最高評分</span><b>酥富匙 千層牛肉酥</b><span>★ 4.8 · 335 則評論</span></article>
-    <article class="macau-pick"><span>路氹甜點</span><b>安德魯餅店・倫敦人店</b><span>★ 4.5 · 333 則評論</span></article>
+    <article class="macau-pick"><span>茶餐廳・同分看評論量</span><b>喜蓮咖啡</b><span>★ 4.2 · 683 則；同分勝馬慶康南天（331 則）</span></article>
+    <article class="macau-pick"><span>烘焙・蛋撻</span><b>安德魯・倫敦人店</b><span>★ 4.5 · 333 則；高於 Goat Bakers、Bamu Bakery（4.4）</span></article>
+    <article class="macau-pick"><span>澳門小食</span><b>酥富匙 千層牛肉酥</b><span>★ 4.8 · 335 則；高於澤賢記（4.4）</span></article>
+    <article class="macau-pick"><span>暫無同類比較</span><b>陳光記・太二</b><span>燒味與中式餐廳在收藏中各只有一間</span></article>
   </div>
   <div class="macau-food-filters" role="group" aria-label="篩選澳門美食類別">
     <button class="macau-food-filter" type="button" data-macau-filter="all" aria-pressed="true">全部 10</button>
@@ -255,7 +256,7 @@
     <button class="macau-food-filter" type="button" data-macau-filter="餐廳" aria-pressed="false">餐廳</button>
   </div>
   <div class="macau-food-grid" id="macauFoodGrid"></div>
-  <p class="food-note">收藏快照：2026-10-14。評分與評論數會變動；「最高評分」只代表此收藏清單的當次快照。單店類別不作跨料理勝負判定。</p>
+  <p class="food-note">評論摘要為重新表述，非逐字引用。評分與評論數以 2026-10-14 的收藏快照為準，之後可能變動；燒味和餐廳目前只有單店收藏，不作同類勝負判定。</p>
 </div>
 
 </section>
@@ -354,19 +355,19 @@ document.querySelectorAll(".food-filter").forEach(button=>button.addEventListene
 renderFoodPlaces("all");
 
 const macauFoodPlaces=[
-  {name:"旺記咖啡",type:"咖啡店",group:"茶餐廳咖啡",rating:"3.8",reviews:"367",price:"MOP 50–100",icon:"☕",query:"旺記咖啡 澳門"},
-  {name:"喜蓮咖啡",type:"港式茶餐廳",group:"茶餐廳咖啡",rating:"4.2",reviews:"683",price:"MOP 1–100",icon:"🫖",query:"喜蓮咖啡 澳門"},
-  {name:"馬慶康南天咖啡室",type:"港式茶餐廳",group:"茶餐廳咖啡",rating:"4.2",reviews:"331",price:"MOP 50–100",icon:"🥪",query:"馬慶康南天咖啡室 澳門"},
-  {name:"Goat Bakers",type:"餅店・烘焙",group:"烘焙甜點",rating:"4.4",reviews:"210",price:"MOP 1–100",icon:"🥐",query:"Goat Bakers Macau"},
-  {name:"Bamu Bakery",type:"餅店・烘焙",group:"烘焙甜點",rating:"4.4",reviews:"42",price:"MOP 1–50",icon:"🍞",query:"Bamu Bakery Macau"},
-  {name:"安德魯餅店及咖啡店（倫敦人店）",type:"葡式蛋撻・咖啡",group:"烘焙甜點",rating:"4.5",reviews:"333",price:"MOP 1–100",icon:"🥧",query:"安德魯餅店及咖啡店 倫敦人 澳門"},
-  {name:"酥富匙 千層牛肉酥",type:"鹹點・酥皮",group:"澳門小食",rating:"4.8",reviews:"335",price:"MOP 1–100",icon:"🥐",query:"酥富匙 千層牛肉酥 澳門"},
-  {name:"澤賢記（官也街店）",type:"澳門小食・手信",group:"澳門小食",rating:"4.4",reviews:"247",price:"MOP 1–100",icon:"🍪",query:"澤賢記 官也街店 澳門"},
-  {name:"陳光記燒臘店",type:"燒味・燒臘",group:"燒味",rating:"3.9",reviews:"1,355",price:"MOP 100–200",icon:"🍖",query:"陳光記燒臘店 澳門"},
-  {name:"太二老壇子酸菜魚（澳門倫敦人店）",type:"酸菜魚・中式餐廳",group:"餐廳",rating:"4.5",reviews:"123",price:"MOP 200–250",icon:"🐟",query:"太二老壇子酸菜魚 澳門倫敦人"}
+  {name:"旺記咖啡",type:"咖啡店",group:"茶餐廳咖啡",rating:"3.8",reviews:"367",price:"MOP 50–100",icon:"☕",query:"旺記咖啡 澳門",summary:"評論常提奶茶與豬扒包，也有人推薦滑蛋松露吐司、咖喱牛腩河粉；早午時段人潮上來，座位較緊。"},
+  {name:"喜蓮咖啡",type:"港式茶餐廳",group:"茶餐廳咖啡",rating:"4.2",reviews:"683",price:"MOP 1–100",icon:"🫖",query:"喜蓮咖啡 澳門",summary:"通粉、牛尾湯、牛肉碎和豬扒包常被提起；評論稱有在地回憶感，也稱讚服務，熱門時段易滿座。"},
+  {name:"馬慶康南天咖啡室",type:"港式茶餐廳",group:"茶餐廳咖啡",rating:"4.2",reviews:"331",price:"MOP 50–100",icon:"🥪",query:"馬慶康南天咖啡室 澳門",summary:"西多士最常出現，評論喜歡鬆軟口感與不過甜的花生醬煉奶；也常提排隊、阿華田和叉燒飯。"},
+  {name:"Goat Bakers",type:"餅店・烘焙",group:"烘焙甜點",rating:"4.4",reviews:"210",price:"MOP 1–100",icon:"🥐",query:"Goat Bakers Macau",summary:"評論主題以蛋撻最多，也有人點名抹茶花蛋撻與開心果沙翁牛角；內餡與口感是常見討論。"},
+  {name:"Bamu Bakery",type:"餅店・烘焙",group:"烘焙甜點",rating:"4.4",reviews:"42",price:"MOP 1–50",icon:"🍞",query:"Bamu Bakery Macau",summary:"葡式蛋撻是主要話題；評論稱外酥內軟、品質不錯，也有人喜歡這裡人潮較少、買了就走。"},
+  {name:"安德魯餅店及咖啡店（倫敦人店）",type:"葡式蛋撻・咖啡",group:"烘焙甜點",rating:"4.5",reviews:"333",price:"MOP 1–100",icon:"🥧",query:"安德魯餅店及咖啡店 倫敦人 澳門",summary:"葡撻常被稱讚蛋香、焦香與酥皮香；也有評論覺得其他點心普通，個別提到收桌服務較急。"},
+  {name:"酥富匙 千層牛肉酥",type:"鹹點・酥皮",group:"澳門小食",rating:"4.8",reviews:"335",price:"MOP 1–100",icon:"🥐",query:"酥富匙 千層牛肉酥 澳門",summary:"千層牛肉酥和葡撻都有人推薦；酥皮香脆不油、內餡有特色。部分評論提醒牛肉酥並非每天供應。"},
+  {name:"澤賢記（官也街店）",type:"澳門小食・手信",group:"澳門小食",rating:"4.4",reviews:"247",price:"MOP 1–100",icon:"🍪",query:"澤賢記 官也街店 澳門",summary:"招牌葡撻口味雞蛋仔外脆內軟，卡士達感明顯、甜度不重；假日排隊時間可能很長。"},
+  {name:"陳光記燒臘店",type:"燒味・燒臘",group:"燒味",rating:"3.9",reviews:"1,355",price:"MOP 100–200",icon:"🍖",query:"陳光記燒臘店 澳門",summary:"燒鵝、叉燒、燒鴨常被提及；有評論喜歡營業時間長，也有人反映拼飯內容不一、價格與併桌體驗見仁見智。"},
+  {name:"太二老壇子酸菜魚（澳門倫敦人店）",type:"酸菜魚・中式餐廳",group:"餐廳",rating:"4.5",reviews:"123",price:"MOP 200–250",icon:"🐟",query:"太二老壇子酸菜魚 澳門倫敦人",summary:"評論喜歡嫩魚、爽脆酸菜和夠味的湯底；辣與麻感較明顯，也有人提醒路氹店價格偏高。"}
 ];
 function makeMacauMapLink(place){const a=document.createElement("a");a.className="food-map";a.target="_blank";a.rel="noopener noreferrer";a.textContent="Google Maps 地點 ↗";a.href="https://www.google.com/maps/search/?api=1&query="+encodeURIComponent(place.query);return a}
-function renderMacauFood(filter){const grid=document.querySelector("#macauFoodGrid");grid.replaceChildren();const chosen=macauFoodPlaces.filter(p=>filter==="all"||p.group===filter);chosen.forEach(p=>{const card=document.createElement("article");card.className="food-card";const top=document.createElement("div");top.className="food-card-top";const icon=document.createElement("span");icon.className="food-card-icon";icon.textContent=p.icon;const category=document.createElement("span");category.className="food-card-category";category.textContent=p.type;top.append(icon,category);const title=document.createElement("h3");title.textContent=p.name;const score=document.createElement("div");score.className="food-card-rating";score.textContent="★ "+p.rating+" · "+p.reviews+" 則評論";const price=document.createElement("div");price.className="food-card-note";price.textContent=p.price;card.append(top,title,score,price,makeMacauMapLink(p));grid.append(card)})}
+function renderMacauFood(filter){const grid=document.querySelector("#macauFoodGrid");grid.replaceChildren();const chosen=macauFoodPlaces.filter(p=>filter==="all"||p.group===filter);chosen.forEach(p=>{const card=document.createElement("article");card.className="food-card";const top=document.createElement("div");top.className="food-card-top";const icon=document.createElement("span");icon.className="food-card-icon";icon.textContent=p.icon;const category=document.createElement("span");category.className="food-card-category";category.textContent=p.type;top.append(icon,category);const title=document.createElement("h3");title.textContent=p.name;const score=document.createElement("div");score.className="food-card-rating";score.textContent="★ "+p.rating+" · "+p.reviews+" 則評論";const price=document.createElement("div");price.className="food-card-note";price.textContent=p.price;const summary=document.createElement("p");summary.className="food-card-summary";summary.textContent=p.summary;card.append(top,title,score,price,summary,makeMacauMapLink(p));grid.append(card)})}
 document.querySelectorAll(".macau-food-filter").forEach(button=>button.addEventListener("click",()=>{document.querySelectorAll(".macau-food-filter").forEach(item=>item.setAttribute("aria-pressed",String(item===button)));renderMacauFood(button.dataset.macauFilter)}));
 renderMacauFood("all");
 
